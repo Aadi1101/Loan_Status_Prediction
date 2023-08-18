@@ -1,0 +1,12 @@
+{
+    "Decision Tree": 0.711864406779661, 
+    "AdaboostClassifier": 0.7966101694915254, 
+    "Gradient Boosting Classifier": 0.6779661016949152, 
+    "Random Forest Classifier": 0.7627118644067796, 
+    "Support Vector Machine": 0.7966101694915254, 
+    "K Nearest Neighbours": 0.7457627118644068, 
+    "Naive Bayes": 0.7966101694915254, 
+    "Catboost Classifier": 0.7627118644067796, 
+    "Logistic Regression": 0.7966101694915254, 
+    "XGBoost Classifier": 0.6779661016949152
+}
