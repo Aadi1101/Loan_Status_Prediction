@@ -1,8 +1,8 @@
 {
-    "Decision Tree": 0.711864406779661, 
+    "Decision Tree": 0.7457627118644068, 
     "AdaboostClassifier": 0.7966101694915254, 
-    "Gradient Boosting Classifier": 0.6779661016949152, 
-    "Random Forest Classifier": 0.7627118644067796, 
+    "Gradient Boosting Classifier": 0.6440677966101694, 
+    "Random Forest Classifier": 0.7796610169491526, 
     "Support Vector Machine": 0.7966101694915254, 
     "K Nearest Neighbours": 0.7457627118644068, 
     "Naive Bayes": 0.7966101694915254, 
