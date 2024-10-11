@@ -22,11 +22,11 @@ def process_and_predict(input_text,json_data):
         output_text = [float(item) for item in input_text['data'].split(',')]
     else:
         output_text = [float(item) for item in input_text.split(',')]
-    with open(r'src\models\preprocessor.pkl', 'rb') as p:
+    with open('src/models/preprocessor.pkl', 'rb') as p:
         preprocessor = dill.load(p)
     output_text = np.array(output_text).reshape(1, -1)
     output_text_dims = preprocessor.transform(output_text)
-    with open(r'src\models\model.pkl', 'rb') as m:
+    with open('src/models/model.pkl', 'rb') as m:
         model = dill.load(m)
     loan_status = model.predict(output_text_dims)
     if loan_status[0]==0.0:
