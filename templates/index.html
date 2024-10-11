@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loan Status Prediction</title>
+</head>
+<body>
+<header>
+  <h1>Loan Status Prediction</h1>
+</header>
+<main>
+  <p>Welcome to the Loan Status Prediction page! Here, you can assess whether a loan application is likely to be approved based on various personal and financial parameters.</p>
+  
+  <h2>Parameters for Loan Status Prediction</h2>
+  <p>The loan status prediction model uses the following input features to determine whether the loan will be approved:</p>
+  
+  <ul>
+    <li><strong>Gender:</strong> Gender of the applicant.</li>
+    <li><strong>Married:</strong> Marital status of the applicant (Yes/No).</li>
+    <li><strong>Dependents:</strong> Number of dependents.</li>
+    <li><strong>Education:</strong> Applicant's education level (Graduate/Not Graduate).</li>
+    <li><strong>Self_Employed:</strong> Whether the applicant is self-employed (Yes/No).</li>
+    <li><strong>ApplicantIncome:</strong> Applicant's income.</li>
+    <li><strong>CoapplicantIncome:</strong> Coapplicant's income.</li>
+    <li><strong>LoanAmount:</strong> Loan amount applied for.</li>
+    <li><strong>Loan_Amount_Term:</strong> Term of the loan in months.</li>
+    <li><strong>Credit_History:</strong> Whether the applicant has a good credit history (1 for Yes, 0 for No).</li>
+    <li><strong>Property_Area:</strong> Area type of the property (Urban, Rural, or Semiurban).</li>
+  </ul>
+
+  <p>For analysis, please enter the above parameters as comma-separated values.</p>
+
+  <br><br>
+  
+  <h2>Input Formats</h2>
+  <ul>
+    <li>Update URL: /predict?data=gender,married,dependents,education,self_employed,applicant_income,coapplicant_income,loan_amount,loan_amount_term,credit_history,property_area</li>
+    <li>Enter data as JSON: {"data":"gender,married,dependents,education,self_employed,applicant_income,coapplicant_income,loan_amount,loan_amount_term,credit_history,property_area"}</li>
+  </ul>
+</main>
+</body>
+</html>
