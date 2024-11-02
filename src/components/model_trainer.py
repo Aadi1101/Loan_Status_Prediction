@@ -89,21 +89,20 @@ class ModelTrainer():
                 "XGBoost Classifier":{}
             }
 
-            model_report:dict = evaluate_models(x_train,y_train,x_test,y_test,models,params)
-            best_model_score = max(sorted(model_report.values()))
-            best_model_name = list(model_report.keys())[
-                list(model_report.values()).index(best_model_score)
-            ]
-            
+            n_features = train_array[:,:-1].shape[1]
+            print("Shape: ",n_features)
+            model_report:dict = evaluate_models(x_train,y_train,x_test,y_test,models,params,n_features,epsilon=0.1,alpha=0.1,gamma=0.9)
+            best_model_name = max(model_report,key=lambda name: model_report[name]["best_accuracy"])
+            best_model_score = model_report[best_model_name]["best_accuracy"]
             best_model = models[best_model_name]
+            selected_features = model_report[best_model_name]["best_features"]
             
             if best_model_score<0.6:
                 raise CustomException("No best model found",sys)
             
-
             save_model(file_path=self.model_trainer_config.model_path,obj=best_model)
 
-            predicted = best_model.predict(x_test)
+            predicted = best_model.predict(x_test[:,selected_features])
             acc = accuracy_score(y_test,predicted)
             logging.info(f"best model : {best_model_name} on both training and testing data with accuracy {acc}")
             save_json_object(file_path=self.model_trainer_config.model_report_path,obj=model_report)
