@@ -38,7 +38,7 @@ def evaluate_models(x_train,y_train,x_test,y_test,models,param,n_features,epsilo
                 state = get_state(feature_selection)  # Get initial state based on feature selection
                 logging.info(f"Episode {episode + 1}/{10} started for {model_name}. Initial state: {state}.")
 
-                for step in range(5):  # Set a maximum number of steps per episode
+                for step in range(10):  # Set a maximum number of steps per episode
                     # Choose an action and toggle feature selection
                     action = choose_action(state, epsilon, n_features, q_table)
                     feature_selection[action] = 1 - feature_selection[action]  # Toggle feature selection
@@ -53,7 +53,7 @@ def evaluate_models(x_train,y_train,x_test,y_test,models,param,n_features,epsilo
                         test_model_accuracy = 0  # If no features selected, set accuracy to 0
                     else:
                         # Use GridSearchCV to find the best hyperparameters for selected features
-                        gs = GridSearchCV(model, para, cv=5, verbose=1, n_jobs=-1)
+                        gs = GridSearchCV(model, para, cv=2, verbose=1, n_jobs=-1)
                         logging.info(f"GridSearchCV initiated for {model_name} with selected features: {selected_features}.")
                         gs.fit(x_train[:, selected_features], y_train)
                         best_params = gs.best_params_

@@ -5,8 +5,8 @@
         "best_params": {"max_depth": 10, "min_samples_split": 2}
     }, 
     "AdaboostClassifier": {
-        "best_accuracy": 0.7966101694915254, 
-        "best_features": [9], 
+        "best_accuracy": 0.7627118644067796, 
+        "best_features": [0], 
         "best_params": {"learning_rate": 0.1, "n_estimators": 100}
     }, 
     "Gradient Boosting Classifier": {
@@ -21,12 +21,11 @@
     }, 
     "Support Vector Machine": {
         "best_accuracy": 0.7627118644067796, 
-        "best_features": [0], 
-        "best_params": {"gamma": "scale", "kernel": "linear"}
+        "best_features": [0], "best_params": {"gamma": "scale", "kernel": "linear"}
     }, 
     "K Nearest Neighbours": {
-        "best_accuracy": 0.7627118644067796, 
-        "best_features": [6], 
+        "best_accuracy": 0.5084745762711864, 
+        "best_features": [0, 3], 
         "best_params": {"metric": "euclidean"}
     }, 
     "Naive Bayes": {
