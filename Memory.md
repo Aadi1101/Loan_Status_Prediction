@@ -1,7 +1,7 @@
 # Architectural Decision Log (ADR & Memory)
 **Workspace Context:** `Aadi1101/Loan_Status_Prediction`
 
-
+----
 
 ## ADR-001: Lexicographical Fractional Indexing
 - **Decision:** Use fractional string order keys (`a0`, `a1`, `a0V`) instead of integer ranks.
